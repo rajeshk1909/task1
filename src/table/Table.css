@@ -1,0 +1,121 @@
+@media (max-width: 768px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  th,
+  td {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  tr {
+    margin-bottom: 10px;
+  }
+
+  th {
+    background-color: transparent;
+  }
+
+  td::before {
+    font-weight: bold;
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  th,
+  td {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  tr {
+    margin-bottom: 10px;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  td::before {
+    font-weight: bold;
+    display: block;
+  }
+
+  td:nth-of-type(1):before {
+    content: "Scrip";
+  }
+  td:nth-of-type(2):before {
+    content: "Quantity";
+  }
+  td:nth-of-type(3):before {
+    content: "Price";
+  }
+  td:nth-of-type(4):before {
+    content: "Avg. Cost";
+  }
+  td:nth-of-type(5):before {
+    content: "Invested Amount";
+  }
+  td:nth-of-type(6):before {
+    content: "Portfolio";
+  }
+  td:nth-of-type(7):before {
+    content: "Unrealized P&L";
+  }
+  td:nth-of-type(8):before {
+    content: "Return";
+  }
+}
+
+@media screen and (max-width: 600px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+  }
+
+  td:before {
+    position: absolute;
+    top: 12px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align: left;
+    font-weight: bold;
+  }
+}
