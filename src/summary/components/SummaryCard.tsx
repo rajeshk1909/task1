@@ -15,14 +15,14 @@ const SummaryCard = ({ item }: SummaryCardProps) => {
 
   return (
     <div className='w-full text-[14px] flex flex-col md:flex-row h-auto md:h-[80px] border-b-2'>
-      <div className='w-full md:w-[15%] p-2'>
+      <div className='w-full md:w-[15%] md:flex-col flex justify-between lg:p-2 px-2 pt-2 '>
         <div className='font-[600]'>{item.scrip}</div>
         <div className='text-blue-300 text-[20px] font-semibold'>
           {`${item.price.slice(0, 5)}`}
         </div>
       </div>
 
-      <div className='w-full md:w-[25%] p-2'>
+      <div className='w-full md:w-[25%] md:p-2 px-2'>
         <div className='flex justify-between'>
           <div>Quantity</div>
           <div>{item.quantity}</div>
@@ -37,7 +37,7 @@ const SummaryCard = ({ item }: SummaryCardProps) => {
         </div>
       </div>
 
-      <div className='w-full md:w-[25%] p-2'>
+      <div className='w-full md:w-[25%] md:p-2 px-2 pt-1 '>
         <div className='flex justify-between'>
           <div>Market Value</div>
           <div>{item.marketValue}</div>
@@ -55,7 +55,7 @@ const SummaryCard = ({ item }: SummaryCardProps) => {
         </div>
       </div>
 
-      <div className='w-full md:w-[25%] p-2'>
+      <div className='w-full md:w-[25%] md:p-2 px-2'>
         <div className='flex justify-between'>
           <div>Unrealized P/L</div>
           <div>{item.unrealizedPL}</div>
@@ -64,17 +64,17 @@ const SummaryCard = ({ item }: SummaryCardProps) => {
           <div>% Return</div>
           <div>{item.return}</div>
         </div>
-        <div className='grid grid-cols-2 pt-1'>
+        <div className='grid grid-cols-2  pt-1'>
           <Progress value={negativeNumber} rightToLeft={true} border={true} />
           <Progress value={positiveNumber} rightToLeft={false} border={true} />
         </div>
       </div>
 
-      <div className='flex w-full md:w-[10%] justify-center items-center flex-col mt-2 md:mt-0 p-2'>
-        <button className='text-green-500 border h-7 px-4 text-center mb-1'>
+      <div className='flex w-full md:w-[10%] justify-evenly md:justify-center items-center md:flex-col flex-row mt-2 md:mb-0 mb-1 md:mt-0 p-2'>
+        <button className='text-green-500 border h-7 px-4 text-center md:mb-1'>
           Buy
         </button>
-        <button className='text-red-500 border h-7 flex items-center justify-center py-2 px-4 mt-1'>
+        <button className='text-red-500 border h-7 flex items-center justify-center py-2 px-4 md:mt-1'>
           Sell
         </button>
       </div>
